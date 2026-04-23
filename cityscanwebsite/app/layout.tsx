@@ -43,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="bg-white">
       <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}>
         <ThemeProvider
           attribute="class"
@@ -53,6 +53,7 @@ export default function RootLayout({
           enableColorScheme={false}
         >
           {children}
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
